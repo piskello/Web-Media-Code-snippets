@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Scrollmagic Statement Fade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+</head>
+
+<body>
+
+
+    <div class="panel">
+        <h1>some content</h1>
+    </div>
+
+    <div class="panel" id="statement">
+        <h1><span>Maecenas faucibus mollis interdum. </span><span id="main">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span><span>Nulla vitae elit libero, a pharetra augue.</span></h1>
+    </div>
+
+    <div class="panel" id="caption-1"></div>
+    <div class="panel" id="caption-2"></div>
+    <div class="panel" id="caption-3"></div>
+    <div class="panel">
+        <h1>some content</h1>
+    </div>
+
+    <div class="panel">
+        <h1>some content</h1>
+    </div>
+
+    <div class="panel">
+        <h1>some content</h1>
+    </div>
+
+    <script>
+        $(function() { // wait for document ready
+            // init
+            var controller = new ScrollMagic.Controller();
+            new ScrollMagic.Scene({
+                    triggerElement: "#statement",
+                    triggerHook: 'onLeave',
+                    duration: "300%"
+                })
+                .setPin("#statement", {
+                    pushFollowers: false
+                })
+                .addIndicators()
+                .addTo(controller);
+
+
+
+            new ScrollMagic.Scene({
+                    triggerElement: "#caption-1",
+                    offset: "0",
+                    duration: "0.001%"
+                })
+                .addIndicators()
+                .on("enter", function(e) {
+                    $("#statement h1 span#main").css("opacity", "1");
+                    $("#statement h1 span#main").css("filter", "blur(0px)");
+                })
+                .addTo(controller);
+
+            new ScrollMagic.Scene({
+                    triggerElement: "#caption-2",
+                    offset: "0",
+                    duration: "0.001%"
+                })
+                .addIndicators()
+                .on("enter", function(e) {
+                    $("#statement h1 span").css("opacity", "1");
+                })
+                .addTo(controller);
+
+            new ScrollMagic.Scene({
+                    triggerElement: "#caption-3",
+                    offset: "0",
+                    duration: "0.01%"
+                })
+                .addIndicators()
+                .on("enter", function(e) {
+                    $("#statement h1 span").css("opacity", "0");
+                })
+                .addTo(controller);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

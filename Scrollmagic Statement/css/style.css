@@ -1,0 +1,61 @@
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .panel {
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .panel h1 {
+            color: white;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+        }
+
+        #statement {
+            text-align: center;
+        }
+
+        #statement h1 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 50vh;
+            margin: auto;
+            text-align: left;
+            color: black;
+            opacity: 1;
+        }
+
+        #statement span {
+            opacity: 0;
+            transition: all 1s ease-out;
+        }
+
+        #statement span#main {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 50vh;
+            margin: auto;
+            text-align: left;
+            filter: blur(20px);
+            color: pink;
+            opacity: 0;
+        }
+
+        .caption {
+            margin: auto;
+            max-width: 300px;
+            height: 90vh;
+
+        }

@@ -1,0 +1,22 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.fake-content {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightpink;
+    text-align: center;
+}
+
+.fake-content h1,
+.counter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.counter {
+    background-color: lightseagreen;
+}

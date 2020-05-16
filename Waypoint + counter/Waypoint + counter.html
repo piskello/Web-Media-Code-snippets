@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Waypoint + counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.waypoints.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var cerchio = new Waypoint({
+                //element: document.getElementById('counter'),
+                element: document.getElementsByClassName('counter'),
+                handler: function() {
+                    $('.counter').countTo();
+                },
+                offset: '50%'
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div class="fake-content">
+        <h1>fake-content</h1>
+    </div>
+    <div class="fake-content">
+        <h1 data-from="0" data-to="44.8" data-speed="1000" data-decimals="2" class="counter">0</h1>
+    </div>
+    <div class="fake-content">
+        <h1>fake-content</h1>
+    </div>
+
+
+</body>
+
+</html>

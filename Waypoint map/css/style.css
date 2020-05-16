@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+svg {
+    transition: all 1s;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 150vh;
+    z-index: -2;
+}
+
+.empty {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.caption {
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.caption p {
+    width: 30vw;
+    margin: auto;
+}
+
+#oltrisarco-foto {
+    background-image: url('https://live.staticflickr.com/4315/36070698702_c8d7b59126_b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-title {
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/prague-czech-republic-dark-map-jurq-studio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: lightpink;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#main-title .titles {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
